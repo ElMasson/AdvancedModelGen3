@@ -1,0 +1,365 @@
+{
+  "global": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "TCC_CEDS_MUSIC": [
+      "Unnamed: 0",
+      "artist_name",
+      "track_name",
+      "release_date",
+      "genre",
+      "lyrics",
+      "len",
+      "dating",
+      "violence",
+      "world/life",
+      "night/time",
+      "shake the audience",
+      "family/gospel",
+      "romantic",
+      "communication",
+      "obscene",
+      "music",
+      "movement/places",
+      "light/visual perceptions",
+      "family/spiritual",
+      "like/girls",
+      "sadness",
+      "feelings",
+      "danceability",
+      "loudness",
+      "acousticness",
+      "instrumentalness",
+      "valence",
+      "energy",
+      "topic",
+      "age"
+    ],
+    "OEUVRES_MUSICALES": [
+      "id_oeuvre",
+      "titre",
+      "annee_creation",
+      "genre_musical",
+      "duree_minutes",
+      "type_oeuvres",
+      "id_artiste_principal"
+    ],
+    "ALBUMS": [
+      "id_album",
+      "titre_album",
+      "annee_sortie",
+      "genre_musical",
+      "id_artiste_principal",
+      "label_production"
+    ],
+    "CONCERTS": [
+      "id_concert",
+      "titre_concert",
+      "date_concert",
+      "lieu",
+      "id_artiste_principal",
+      "nb_spectateurs",
+      "recettes_generees"
+    ],
+    "RECORDING": [
+      "id_enregistrement",
+      "date_enregistrement",
+      "studio",
+      "id_artiste",
+      "id_oeuvre",
+      "duree_enregistrement",
+      "type_enregistrement"
+    ],
+    "ROYALTIES": [
+      "id_royalties",
+      "id_artiste",
+      "id_oeuvre",
+      "montant_genere",
+      "type_revenus",
+      "date_distribution"
+    ],
+    "GENRES_MUSICAUX": [
+      "id_genre",
+      "genre",
+      "description"
+    ],
+    "COLLABORATIONS": [
+      "id_collaboration",
+      "id_artiste_principal",
+      "id_artiste_secondaire",
+      "type_collaboration",
+      "date_debut",
+      "date_fin"
+    ],
+    "COLLABORATION_OEUVRE": [
+      "id_collaboration_oeuvre",
+      "id_artiste",
+      "id_oeuvre",
+      "role",
+      "date_debut_collaboration",
+      "date_fin_collaboration"
+    ],
+    "COMPOSITEURS": [
+      "id_compositeur",
+      "nom",
+      "prenom",
+      "date_naissance",
+      "date_deces",
+      "nationalite",
+      "id_langue"
+    ],
+    "INSTRUMENTS": [
+      "id_instrument",
+      "nom_instrument",
+      "categorie",
+      "id_artiste_principal"
+    ],
+    "LANGUAGE": [
+      "id_langue",
+      "langue",
+      "code_iso"
+    ],
+    "LIEU": [
+      "id_lieu",
+      "nom_lieu",
+      "adresse",
+      "ville",
+      "pays",
+      "capacite",
+      "type_lieu"
+    ],
+    "MANAGEMENTS": [
+      "id_mangament",
+      "nom_agence",
+      "adresse",
+      "contact"
+    ],
+    "PRODUCTEUR": [
+      "id_producteur",
+      "nom",
+      "prenom",
+      "societe_production",
+      "nationalite"
+    ],
+    "REGION": [
+      "id_region",
+      "nom_region",
+      "code_iso"
+    ],
+    "LABELS": [
+      "id_label",
+      "label",
+      "annee_creation",
+      "pays_origine"
+    ],
+    "CONTRAT": [
+      "id_contrat",
+      "id_artiste",
+      "date_debut_contrat",
+      "duree_contrat",
+      "type_contrat",
+      "taux_royalties",
+      "recettes_generees"
+    ]
+  },
+  "duke_demo_artists": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "LANGUAGE": [
+      "id_langue",
+      "langue",
+      "code_iso"
+    ],
+    "MANAGEMENTS": [
+      "id_mangament",
+      "nom_agence",
+      "adresse",
+      "contact"
+    ],
+    "OEUVRES_MUSICALES": [
+      "id_oeuvre",
+      "titre",
+      "annee_creation",
+      "genre_musical",
+      "duree_minutes",
+      "type_oeuvres",
+      "id_artiste_principal"
+    ],
+    "ALBUMS": [
+      "id_album",
+      "titre_album",
+      "annee_sortie",
+      "genre_musical",
+      "id_artiste_principal",
+      "label_production"
+    ],
+    "GENRES_MUSICAUX": [
+      "id_genre",
+      "genre",
+      "description"
+    ],
+    "LABELS": [
+      "id_label",
+      "label",
+      "annee_creation",
+      "pays_origine"
+    ],
+    "COMPOSITEURS": [
+      "id_compositeur",
+      "nom",
+      "prenom",
+      "date_naissance",
+      "date_deces",
+      "nationalite",
+      "id_langue"
+    ],
+    "COLLABORATIONS": [
+      "id_collaboration",
+      "id_artiste_principal",
+      "id_artiste_secondaire",
+      "type_collaboration",
+      "date_debut",
+      "date_fin"
+    ],
+    "COLLABORATION_OEUVRE": [
+      "id_collaboration_oeuvre",
+      "id_artiste",
+      "id_oeuvre",
+      "role",
+      "date_debut_collaboration",
+      "date_fin_collaboration"
+    ],
+    "INSTRUMENTS": [
+      "id_instrument",
+      "nom_instrument",
+      "categorie",
+      "id_artiste_principal"
+    ],
+    "PRODUCTEUR": [
+        "id_producteur",
+        "nom",
+        "prenom",
+        "societe_production",
+        "nationalite"
+      ],
+    "REGION": [
+      "id_region",
+      "nom_region",
+      "code_iso"
+    ],
+    "LIEU": [
+      "id_lieu",
+      "nom_lieu",
+      "adresse",
+      "ville",
+      "pays",
+      "capacite",
+      "type_lieu"
+    ]
+  },
+  "duke_demo_events": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "CONCERTS": [
+      "id_concert",
+      "titre_concert",
+      "date_concert",
+      "lieu",
+      "id_artiste_principal",
+      "nb_spectateurs",
+      "recettes_generees"
+    ],
+    "OEUVRES_MUSICALES": [
+      "id_oeuvre",
+      "titre",
+      "annee_creation",
+      "genre_musical",
+      "duree_minutes",
+      "type_oeuvres",
+      "id_artiste_principal"
+    ],
+    "LIEU": [
+      "id_lieu",
+      "nom_lieu",
+      "adresse",
+      "ville",
+      "pays",
+      "capacite",
+      "type_lieu"
+    ],
+    "RECORDING": [
+      "id_enregistrement",
+      "date_enregistrement",
+      "studio",
+      "id_artiste",
+      "id_oeuvre",
+      "duree_enregistrement",
+      "type_enregistrement"
+    ],
+    "ROYALTIES": [
+      "id_royalties",
+      "id_artiste",
+      "id_oeuvre",
+      "montant_genere",
+      "type_revenus",
+      "date_distribution"
+    ],
+    "CONTRAT": [
+      "id_contrat",
+      "id_artiste",
+      "id_oeuvre",
+      "date_debut_contrat",
+      "duree_contrat",
+      "type_contrat",
+      "taux_royalties",
+      "recettes_generees"
+    ]
+  },
+
+  "tcc_ceds_music": {
+    "TRACKS": [
+      "artist_name",
+      "track_name",
+      "release_date",
+      "genre",
+      "lyrics",
+      "len",
+      "dating",
+      "violence",
+      "world/life",
+      "night/time",
+      "sadness",
+      "feelings",
+      "danceability",
+      "valence",
+      "energy"
+    ]
+  }
+}

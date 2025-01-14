@@ -1,0 +1,417 @@
+{
+  "global": {
+    "ArtisticEntity": {
+      "description": "Représente les entités artistiques et leurs caractéristiques fondamentales",
+      "properties": [
+        "artistes.id_artiste",
+        "artistes.nom",
+        "artistes.prenom",
+        "artistes.pseudonyme",
+        "artistes.date_naissance",
+        "artistes.date_deces",
+        "artistes.nationalite",
+        "artistes.instrument_principal",
+        "tcc_ceds_music.artist_name"
+      ],
+      "relationships": [
+        "creates MusicalWork",
+        "participates_in Performance",
+        "has BusinessRelations",
+        "belongs_to GeographicalContext",
+        "plays Instrument",
+        "involved_in Collaboration",
+        "expresses Emotion"
+      ],
+      "source": [
+        "duke_demo_artists",
+        "duke_demo_events",
+        "tcc_ceds_music"
+      ]
+    },
+    "MusicalWork": {
+      "description": "Représente les œuvres musicales et leurs attributs créatifs et techniques",
+      "properties": [
+        "oeuvres_musicales.id_oeuvre",
+        "oeuvres_musicales.titre",
+        "oeuvres_musicales.annee_creation",
+        "oeuvres_musicales.duree_minutes",
+        "albums.titre_album",
+        "albums.annee_sortie",
+        "tcc_ceds_music.track_name",
+        "tcc_ceds_music.release_date",
+        "tcc_ceds_music.lyrics",
+        "tcc_ceds_music.danceability",
+        "tcc_ceds_music.energy",
+        "tcc_ceds_music.valence"
+      ],
+      "relationships": [
+        "created_by ArtisticEntity",
+        "categorized_by MusicalClassification",
+        "generates Revenue",
+        "recorded_in Performance",
+        "evokes Emotion",
+        "part_of Album",
+        "featured_in Collaboration"
+      ],
+      "source": [
+        "duke_demo_artists",
+        "duke_demo_events",
+        "tcc_ceds_music"
+      ]
+    },
+    "Performance": {
+      "description": "Capture les événements de performance et d'enregistrement",
+      "properties": [
+        "concerts.id_concert",
+        "concerts.titre_concert",
+        "concerts.date_concert",
+        "concerts.nb_spectateurs",
+        "recording.id_enregistrement",
+        "recording.date_enregistrement",
+        "recording.type_enregistrement",
+        "recording.duree_enregistrement"
+      ],
+      "relationships": [
+        "performed_by ArtisticEntity",
+        "features MusicalWork",
+        "generates Revenue",
+        "takes_place_in GeographicalContext",
+        "managed_by BusinessRelations"
+      ],
+      "source": [
+        "duke_demo_events"
+      ]
+    },
+    "Management": {
+      "description": "Entités de gestion et d'administration des artistes et œuvres",
+      "properties": [
+        "managements.id_mangament",
+        "managements.nom_agence",
+        "managements.adresse",
+        "managements.contact",
+        "labels.id_label",
+        "labels.label"
+      ],
+      "relationships": [
+        "manages ArtisticEntity",
+        "operates_in Location",
+        "handles Revenue",
+        "coordinates Production",
+        "oversees Collaboration"
+      ],
+      "source": [
+        "duke_demo_artists"
+      ]
+    }
+        ,
+    "BusinessRelations": {
+      "description": "Aspects commerciaux et contractuels de l'industrie musicale",
+      "properties": [
+        "contrat.id_contrat",
+        "contrat.type_contrat",
+        "contrat.taux_royalties",
+        "contrat.duree_contrat",
+        "labels.id_label",
+        "labels.label",
+        "managements.id_management",
+        "managements.nom_management"
+      ],
+      "relationships": [
+        "manages ArtisticEntity",
+        "handles MusicalWork",
+        "processes Revenue",
+        "operates_in GeographicalContext",
+        "oversees Performance",
+        "manages Collaboration"
+      ],
+      "source": [
+        "duke_demo_artists",
+        "duke_demo_events"
+      ]
+    },
+    "MusicalClassification": {
+      "description": "Catégorisation et classification musicale",
+      "properties": [
+        "genres_musicaux.id_genre",
+        "genres_musicaux.genre",
+        "genres_musicaux.description",
+        "tcc_ceds_music.genre",
+        "tcc_ceds_music.danceability",
+        "tcc_ceds_music.energy",
+        "tcc_ceds_music.instrumentalness",
+        "tcc_ceds_music.acousticness",
+        "tcc_ceds_music.valence"
+      ],
+      "relationships": [
+        "categorizes MusicalWork",
+        "associated_with ArtisticEntity",
+        "influences Performance",
+        "guides Production",
+        "impacts Revenue"
+      ],
+      "source": [
+        "duke_demo_artists",
+        "tcc_ceds_music"
+      ]
+    },
+    "Revenue": {
+      "description": "Gestion des revenus et performances financières",
+      "properties": [
+        "royalties.id_royalties",
+        "royalties.montant_genere",
+        "royalties.type_revenus",
+        "contrat.recettes_generees",
+        "concerts.recettes_generees"
+      ],
+      "relationships": [
+        "generated_by Performance",
+        "distributed_through BusinessRelations",
+        "associated_with MusicalWork",
+        "allocated_to ArtisticEntity",
+        "tracked_by GeographicalContext"
+      ],
+      "source": [
+        "duke_demo_events"
+      ]
+    },
+    "GeographicalContext": {
+      "description": "Contexte géographique et localisation",
+      "properties": [
+        "lieu.id_lieu",
+        "lieu.nom_lieu",
+        "lieu.ville",
+        "lieu.pays",
+        "lieu.capacite",
+        "region.id_region",
+        "region.nom_region"
+      ],
+      "relationships": [
+        "contains Performance",
+        "hosts ArtisticEntity",
+        "contextualizes BusinessRelations",
+        "influences MusicalClassification",
+        "segments Revenue"
+      ],
+      "source": [
+        "duke_demo_artists"
+      ]
+    },
+    "Emotion": {
+      "description": "Représente les émotions et thèmes évoqués par les œuvres musicales",
+      "properties": [
+        "tcc_ceds_music.sadness",
+        "tcc_ceds_music.dating",
+        "tcc_ceds_music.violence",
+        "tcc_ceds_music.world/life",
+        "tcc_ceds_music.night/time",
+        "tcc_ceds_music.feelings",
+        "tcc_ceds_music.family/gospel",
+        "tcc_ceds_music.romantic"
+      ],
+      "relationships": [
+        "evoked_by MusicalWork",
+        "expressed_by ArtisticEntity",
+        "influenced_by MusicalClassification",
+        "affects Performance",
+        "impacts Revenue"
+      ],
+      "source": [
+        "tcc_ceds_music"
+      ]
+    },
+    "Collaboration": {
+      "description": "Représente les collaborations entre artistes",
+      "properties": [
+        "collaborations.id_collaboration",
+        "collaborations.type_collaboration",
+        "collaborations.date_debut_collaboration",
+        "collaborations.date_fin_collaboration",
+        "collaboration_oeuvre.id_collaboration_oeuvre",
+        "collaboration_oeuvre.role"
+      ],
+      "relationships": [
+        "involves ArtisticEntity",
+        "produces MusicalWork",
+        "managed_by BusinessRelations",
+        "generates Revenue",
+        "takes_place_in GeographicalContext"
+      ],
+      "source": [
+        "duke_demo_artists"
+      ]
+    },
+    "Instruments": {
+      "description": "Instruments de musique utilisés par les artistes",
+      "properties": [
+        "instruments.id_instrument",
+        "instruments.nom_instrument",
+        "instruments.categorie",
+        "artistes.instrument_principal"
+      ],
+      "relationships": [
+        "used_by ArtisticEntity",
+        "featured_in Performance",
+        "part_of MusicalWork",
+        "categorized_in MusicalClassification"
+      ],
+      "source": [
+        "duke_demo_artists"
+      ]
+    },
+    "TechnicalAttributes": {
+      "description": "Caractéristiques techniques et mesurables des œuvres",
+      "properties": [
+        "tcc_ceds_music.loudness",
+        "tcc_ceds_music.instrumentalness",
+        "tcc_ceds_music.danceability",
+        "tcc_ceds_music.energy",
+        "tcc_ceds_music.acousticness",
+        "recording.duree_enregistrement",
+        "oeuvres_musicales.duree_minutes"
+      ],
+      "relationships": [
+        "describes MusicalWork",
+        "influences Performance",
+        "measured_in Production",
+        "affects Revenue"
+      ],
+      "source": [
+        "tcc_ceds_music",
+        "duke_demo_artists",
+        "duke_demo_events"
+      ]
+    },
+    "Contract": {
+      "description": "Aspects contractuels et légaux",
+      "properties": [
+        "contrat.id_contrat",
+        "contrat.date_debut_contrat",
+        "contrat.duree_contrat",
+        "contrat.type_contrat",
+        "contrat.taux_royalties",
+        "contrat.recettes_generees"
+      ],
+      "relationships": [
+        "binds ArtisticEntity",
+        "governs Revenue",
+        "involves BusinessRelations",
+        "covers MusicalWork",
+        "managed_by Management"
+      ],
+      "source": [
+        "duke_demo_events"
+      ]
+    },
+    "ThematicContent": {
+      "description": "Contenu thématique et contextuel des œuvres",
+      "properties": [
+        "tcc_ceds_music.world/life",
+        "tcc_ceds_music.night/time",
+        "tcc_ceds_music.family/gospel",
+        "tcc_ceds_music.communication",
+        "tcc_ceds_music.movement/places",
+        "tcc_ceds_music.light/visual perceptions",
+        "tcc_ceds_music.family/spiritual"
+      ],
+      "relationships": [
+        "enriches MusicalWork",
+        "expressed_by ArtisticEntity",
+        "influences Emotion",
+        "relates_to Location",
+        "impacts MusicalClassification"
+      ],
+      "source": [
+        "tcc_ceds_music"
+      ]
+    }
+
+  },
+  "schemas": {
+    "duke_demo_artists": {
+      "ArtisticEntity": {
+        "description": "Représente les entités artistiques et leurs caractéristiques fondamentales",
+        "properties": [
+          "artistes.id_artiste",
+          "artistes.nom",
+          "artistes.prenom",
+          "artistes.pseudonyme",
+          "artistes.date_naissance",
+          "artistes.date_deces",
+          "artistes.nationalite",
+          "artistes.instrument_principal"
+        ],
+        "relationships": [
+          "creates MusicalWork",
+          "participates_in Performance",
+          "has BusinessRelations",
+          "belongs_to GeographicalContext",
+          "plays Instrument",
+          "involved_in Collaboration",
+          "expresses Emotion"
+        ]
+      },
+      "Management": {
+        "description": "Entités de gestion et d'administration des artistes et œuvres",
+        "properties": [
+          "managements.id_management",
+          "managements.nom_agence",
+          "managements.adresse",
+          "managements.contact",
+          "labels.id_label",
+          "labels.label"
+        ],
+        "relationships": [
+          "manages ArtisticEntity",
+          "operates_in Location",
+          "handles Revenue",
+          "coordinates Production",
+          "oversees Collaboration"
+        ]
+      }
+    },
+    "duke_demo_events": {
+      "Performance": {
+        "description": "Capture les événements de performance et d'enregistrement",
+        "properties": [
+          "concerts.id_concert",
+          "concerts.titre_concert",
+          "concerts.date_concert",
+          "concerts.nb_spectateurs",
+          "recording.id_enregistrement",
+          "recording.date_enregistrement",
+          "recording.type_enregistrement",
+          "recording.duree_enregistrement"
+        ],
+        "relationships": [
+          "performed_by ArtisticEntity",
+          "features MusicalWork",
+          "generates Revenue",
+          "takes_place_in GeographicalContext",
+          "managed_by BusinessRelations"
+        ]
+      }
+    },
+    "tcc_ceds_music": {
+      "MusicalWork": {
+        "description": "Représente les œuvres musicales et leurs attributs créatifs et techniques",
+        "properties": [
+          "tcc_ceds_music.track_name",
+          "tcc_ceds_music.release_date",
+          "tcc_ceds_music.lyrics",
+          "tcc_ceds_music.danceability",
+          "tcc_ceds_music.energy",
+          "tcc_ceds_music.valence"
+        ],
+        "relationships": [
+          "created_by ArtisticEntity",
+          "categorized_by MusicalClassification",
+          "generates Revenue",
+          "recorded_in Performance",
+          "evokes Emotion",
+          "part_of Album",
+          "featured_in Collaboration"
+        ]
+      }
+    }
+  }
+}

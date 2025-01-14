@@ -1,0 +1,498 @@
+{
+  "global": [
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "creates",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ALBUMS",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "releases",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "nom, prenom",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "TCC_CEDS_MUSIC",
+        "column": "artist_name",
+        "cardinality": "n"
+      },
+      "functional_label": "performs",
+      "probability": 75
+    },
+    {
+      "from": {
+        "table": "COMPOSITEURS",
+        "column": "id_langue",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LANGUAGE",
+        "column": "id_langue",
+        "cardinality": "1"
+      },
+      "functional_label": "writes_in",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "genre_musical",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "GENRES_MUSICAUX",
+        "column": "genre",
+        "cardinality": "1"
+      },
+      "functional_label": "belongs_to",
+      "probability": 80
+    },
+    {
+      "from": {
+        "table": "ALBUMS",
+        "column": "label_production",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LABELS",
+        "column": "label",
+        "cardinality": "1"
+      },
+      "functional_label": "published_by",
+      "probability": 85
+    },
+    {
+      "from": {
+        "table": "CONCERTS",
+        "column": "lieu",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LIEU",
+        "column": "nom_lieu",
+        "cardinality": "1"
+      },
+      "functional_label": "takes_place_at",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "LIEU",
+        "column": "id_region",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "REGION",
+        "column": "id_region",
+        "cardinality": "1"
+      },
+      "functional_label": "located_in",
+      "probability": 85
+    },
+    {
+      "from": {
+        "table": "COLLABORATIONS",
+        "column": ["id_artiste_principal", "id_artiste_secondaire"],
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "functional_label": "collaborates_with",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "COLLABORATION_OEUVRE",
+        "column": "id_oeuvre",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_oeuvre",
+        "cardinality": "1"
+      },
+      "functional_label": "produced_through",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "INSTRUMENTS",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "plays",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "titre",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "TCC_CEDS_MUSIC",
+        "column": "track_name",
+        "cardinality": "n"
+      },
+      "functional_label": "referenced_as",
+      "probability": 65
+    },
+    {
+      "from": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_producteur",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "PRODUCTEUR",
+        "column": "id_producteur",
+        "cardinality": "1"
+      },
+      "functional_label": "produced_by",
+      "probability": 75
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ROYALTIES",
+        "column": "id_artiste",
+        "cardinality": "n"
+      },
+      "functional_label": "earns",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "MANAGEMENTS",
+        "column": "id_artiste",
+        "cardinality": "n"
+      },
+      "functional_label": "managed_by",
+      "probability": 80
+    },
+    {
+      "from": {
+        "table": "RECORDING",
+        "column": "id_oeuvre",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_oeuvre",
+        "cardinality": "1"
+      },
+      "functional_label": "records",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "CONTRAT",
+        "column": "id_artiste",
+        "cardinality": "n"
+      },
+      "functional_label": "bound_by",
+      "probability": 100
+    }
+  ],
+   "duke_demo_artists": [
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "creates",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_langue",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LANGUAGE",
+        "column": "id_langue",
+        "cardinality": "1"
+      },
+      "functional_label": "speaks",
+      "probability": 70
+    },
+    {
+      "from": {
+        "table": "COMPOSITEURS",
+        "column": "id_langue",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LANGUAGE",
+        "column": "id_langue",
+        "cardinality": "1"
+      },
+      "functional_label": "writes_in",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "genre_musical",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "GENRES_MUSICAUX",
+        "column": "genre",
+        "cardinality": "1"
+      },
+      "functional_label": "belongs_to",
+      "probability": 85
+    },
+    {
+      "from": {
+        "table": "ALBUMS",
+        "column": "label_production",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LABELS",
+        "column": "label",
+        "cardinality": "1"
+      },
+      "functional_label": "published_by",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "COLLABORATIONS",
+        "column": ["id_artiste_principal", "id_artiste_secondaire"],
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "functional_label": "involves",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "COLLABORATION_OEUVRE",
+        "column": "id_oeuvre",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_oeuvre",
+        "cardinality": "1"
+      },
+      "functional_label": "concerns",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "INSTRUMENTS",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "plays",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "LIEU",
+        "column": "id_region",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "REGION",
+        "column": "id_region",
+        "cardinality": "1"
+      },
+      "functional_label": "located_in",
+      "probability": 85
+    },
+    {
+      "from": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_producteur",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "PRODUCTEUR",
+        "column": "id_producteur",
+        "cardinality": "1"
+      },
+      "functional_label": "produced_by",
+      "probability": 80
+    }
+  ],
+  "duke_demo_events": [
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "CONCERTS",
+        "column": "id_artiste_principal",
+        "cardinality": "n"
+      },
+      "functional_label": "performs_in",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "RECORDING",
+        "column": "id_artiste",
+        "cardinality": "n"
+      },
+      "functional_label": "records",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "ARTISTES",
+        "column": "id_artiste",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ROYALTIES",
+        "column": "id_artiste",
+        "cardinality": "n"
+      },
+      "functional_label": "earns",
+      "probability": 100
+    },
+    {
+      "from": {
+        "table": "CONCERTS",
+        "column": "id_concert",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ROYALTIES",
+        "column": "id_concert",
+        "cardinality": "n"
+      },
+      "functional_label": "generates",
+      "probability": 75
+    },
+    {
+      "from": {
+        "table": "RECORDING",
+        "column": "id_enregistrement",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ROYALTIES",
+        "column": "id_enregistrement",
+        "cardinality": "n"
+      },
+      "functional_label": "generates",
+      "probability": 75
+    },
+    {
+      "from": {
+        "table": "CONTRAT",
+        "column": "id_contrat",
+        "cardinality": "1"
+      },
+      "to": {
+        "table": "ROYALTIES",
+        "column": "id_contrat",
+        "cardinality": "n"
+      },
+      "functional_label": "governs",
+      "probability": 85
+    },
+    {
+      "from": {
+        "table": "CONCERTS",
+        "column": "lieu",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "LIEU",
+        "column": "id_lieu",
+        "cardinality": "1"
+      },
+      "functional_label": "takes_place_at",
+      "probability": 90
+    },
+    {
+      "from": {
+        "table": "RECORDING",
+        "column": "id_oeuvre",
+        "cardinality": "n"
+      },
+      "to": {
+        "table": "OEUVRES_MUSICALES",
+        "column": "id_oeuvre",
+        "cardinality": "1"
+      },
+      "functional_label": "records",
+      "probability": 90
+    }
+  ]
+}

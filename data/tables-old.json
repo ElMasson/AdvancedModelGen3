@@ -1,0 +1,161 @@
+{
+  "global": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "OEUVRES_MUSICALES": [
+      "id_oeuvre",
+      "titre",
+      "annee_creation",
+      "genre_musical",
+      "duree_minutes",
+      "type_oeuvres",
+      "id_artiste_principal"
+    ],
+    "ALBUMS": [
+      "id_album",
+      "titre_album",
+      "annee_sortie",
+      "genre_musical",
+      "id_artiste_principal",
+      "label_production"
+    ],
+    "CONCERTS": [
+      "id_concert",
+      "titre_concert",
+      "date_concert",
+      "lieu",
+      "id_artiste_principal",
+      "nb_spectateurs",
+      "recettes_generees"
+    ],
+    "RECORDING": [
+      "id_enregistrement",
+      "date_enregistrement",
+      "studio",
+      "id_artiste",
+      "id_oeuvre",
+      "duree_enregistrement",
+      "type_enregistrement"
+    ],
+    "ROYALTIES": [
+      "id_royalties",
+      "id_artiste",
+      "id_oeuvre",
+      "montant_genere",
+      "type_revenus",
+      "date_distribution"
+    ],
+    "GENRES_MUSICAUX": [
+      "id_genre",
+      "genre",
+      "description"
+    ],
+    "LIEU": [
+      "id_lieu",
+      "nom_lieu",
+      "adresse",
+      "ville",
+      "pays",
+      "capacite",
+      "type_lieu"
+    ]
+  },
+  "duke_demo_artists": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "OEUVRES_MUSICALES": [
+      "id_oeuvre",
+      "titre",
+      "annee_creation",
+      "genre_musical",
+      "duree_minutes",
+      "type_oeuvres",
+      "id_artiste_principal"
+    ],
+    "ALBUMS": [
+      "id_album",
+      "titre_album",
+      "annee_sortie",
+      "genre_musical",
+      "id_artiste_principal",
+      "label_production"
+    ],
+    "GENRES_MUSICAUX": [
+      "id_genre",
+      "genre",
+      "description"
+    ],
+    "LABELS": [
+      "id_label",
+      "label",
+      "annee_creation",
+      "pays_origine"
+    ]
+  },
+  "duke_demo_events": {
+    "ARTISTES": [
+      "id_artiste",
+      "nom",
+      "prenom",
+      "pseudonyme",
+      "date_naissance",
+      "date_deces",
+      "genre_musical",
+      "nationalite",
+      "instrument_principal"
+    ],
+    "CONCERTS": [
+      "id_concert",
+      "titre_concert",
+      "date_concert",
+      "lieu",
+      "id_artiste_principal",
+      "nb_spectateurs",
+      "recettes_generees"
+    ],
+    "RECORDING": [
+      "id_enregistrement",
+      "date_enregistrement",
+      "studio",
+      "id_artiste",
+      "id_oeuvre",
+      "duree_enregistrement",
+      "type_enregistrement"
+    ],
+    "ROYALTIES": [
+      "id_royalties",
+      "id_artiste",
+      "id_oeuvre",
+      "montant_genere",
+      "type_revenus",
+      "date_distribution"
+    ],
+    "CONTRAT": [
+      "id_contrat",
+      "id_artiste",
+      "date_debut_contrat",
+      "duree_contrat",
+      "type_contrat",
+      "taux_royalties",
+      "recettes_generees"
+    ]
+  }
+}

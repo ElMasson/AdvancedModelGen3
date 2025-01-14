@@ -1,0 +1,114 @@
+{
+  "ArtisticEntity": {
+    "description": "Représente les entités artistiques et leurs caractéristiques fondamentales",
+    "properties": [
+      "artistes.id_artiste",
+      "artistes.nom",
+      "artistes.prenom",
+      "artistes.pseudonyme",
+      "artistes.date_naissance",
+      "artistes.date_deces",
+      "artistes.nationalite"
+    ],
+    "relationships": [
+      "creates MusicalWork",
+      "participates_in Performance",
+      "has BusinessRelations"
+    ],
+    "source": ["duke_demo_artists", "duke_demo_events", "CSV"]
+  },
+  "MusicalWork": {
+    "description": "Représente les œuvres musicales et leurs attributs créatifs",
+    "properties": [
+      "oeuvres_musicales.id_oeuvre",
+      "oeuvres_musicales.titre",
+      "oeuvres_musicales.annee_creation",
+      "oeuvres_musicales.duree_minutes",
+      "albums.titre_album",
+      "albums.annee_sortie"
+    ],
+    "relationships": [
+      "created_by ArtisticEntity",
+      "categorized_by MusicalClassification",
+      "generates Revenue"
+    ],
+    "source": ["duke_demo_artists", "CSV"]
+  },
+  "Performance": {
+    "description": "Capture les événements de performance et d'enregistrement",
+    "properties": [
+      "concerts.id_concert",
+      "concerts.titre_concert",
+      "concerts.date_concert",
+      "recording.id_enregistrement",
+      "recording.date_enregistrement",
+      "recording.type_enregistrement"
+    ],
+    "relationships": [
+      "performed_by ArtisticEntity",
+      "features MusicalWork",
+      "generates Revenue"
+    ],
+    "source": ["duke_demo_events"]
+  },
+  "BusinessRelations": {
+    "description": "Aspects commerciaux et contractuels",
+    "properties": [
+      "contrat.id_contrat",
+      "contrat.type_contrat",
+      "contrat.taux_royalties",
+      "labels.id_label",
+      "labels.label"
+    ],
+    "relationships": [
+      "manages ArtisticEntity",
+      "handles MusicalWork",
+      "processes Revenue"
+    ],
+    "source": ["duke_demo_artists", "duke_demo_events"]
+  },
+  "MusicalClassification": {
+    "description": "Système de classification et catégorisation musicale",
+    "properties": [
+      "genres_musicaux.id_genre",
+      "genres_musicaux.genre",
+      "genres_musicaux.description"
+    ],
+    "relationships": [
+      "classifies MusicalWork",
+      "associated_with ArtisticEntity"
+    ],
+    "source": ["duke_demo_artists", "CSV"]
+  },
+  "Revenue": {
+    "description": "Gestion des revenus et performances financières",
+    "properties": [
+      "royalties.id_royalties",
+      "royalties.montant_genere",
+      "royalties.type_revenus",
+      "contrat.recettes_generees",
+      "concerts.recettes_generees"
+    ],
+    "relationships": [
+      "generated_by Performance",
+      "distributed_through BusinessRelations",
+      "associated_with MusicalWork"
+    ],
+    "source": ["duke_demo_events"]
+  },
+  "GeographicalContext": {
+    "description": "Contexte géographique et localisation",
+    "properties": [
+      "lieu.id_lieu",
+      "lieu.nom_lieu",
+      "lieu.ville",
+      "lieu.pays"
+    ],
+    "relationships": [
+      "contains Performance",
+      "hosts ArtisticEntity",
+      "contextualizes BusinessRelations"
+    ],
+    "source": ["duke_demo_artists"]
+  }
+}

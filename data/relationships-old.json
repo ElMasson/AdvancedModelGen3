@@ -1,0 +1,128 @@
+{
+  "global": [
+    {
+      "from": "ARTISTES",
+      "to": "OEUVRES_MUSICALES",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "ALBUMS",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "CONCERTS",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "RECORDING",
+      "label": "id_artiste",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "ROYALTIES",
+      "label": "id_artiste",
+      "probability": 100
+    },
+    {
+      "from": "OEUVRES_MUSICALES",
+      "to": "GENRES_MUSICAUX",
+      "label": "genre_musical",
+      "probability": 75
+    },
+    {
+      "from": "OEUVRES_MUSICALES",
+      "to": "RECORDING",
+      "label": "id_oeuvre",
+      "probability": 75
+    },
+    {
+      "from": "OEUVRES_MUSICALES",
+      "to": "ROYALTIES",
+      "label": "id_oeuvre",
+      "probability": 75
+    },
+    {
+      "from": "CONCERTS",
+      "to": "LIEU",
+      "label": "lieu",
+      "probability": 75
+    },
+    {
+      "from": "RECORDING",
+      "to": "LIEU",
+      "label": "studio",
+      "probability": 50
+    }
+  ],
+  "duke_demo_artists": [
+    {
+      "from": "ARTISTES",
+      "to": "OEUVRES_MUSICALES",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "ALBUMS",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "OEUVRES_MUSICALES",
+      "to": "GENRES_MUSICAUX",
+      "label": "genre_musical",
+      "probability": 75
+    },
+    {
+      "from": "ALBUMS",
+      "to": "LABELS",
+      "label": "label_production",
+      "probability": 75
+    }
+  ],
+  "duke_demo_events": [
+    {
+      "from": "ARTISTES",
+      "to": "CONCERTS",
+      "label": "id_artiste_principal",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "RECORDING",
+      "label": "id_artiste",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "ROYALTIES",
+      "label": "id_artiste",
+      "probability": 100
+    },
+    {
+      "from": "ARTISTES",
+      "to": "CONTRAT",
+      "label": "id_artiste",
+      "probability": 100
+    },
+    {
+      "from": "CONCERTS",
+      "to": "ROYALTIES",
+      "label": "generates",
+      "probability": 75
+    },
+    {
+      "from": "RECORDING",
+      "to": "ROYALTIES",
+      "label": "generates",
+      "probability": 75
+    }
+  ]
+}

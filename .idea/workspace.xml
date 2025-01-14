@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="535a3e40-ef1b-4c6d-816e-a6359307f2cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/AdvancedDataModelGen3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/conceptual_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/documentation_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/llm_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/optimization_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/pattern_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/relationship_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/sql_rules_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ontology-old.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ontology.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/relationships-old.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/relationships.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tables-old.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tables.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/schema_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/example_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/examples_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/catalog_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/main_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/results_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/sidebar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/sql_rules_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/result_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/data_model_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/frontend/DataModelView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/frontend/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/knowledge_graph_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualization/utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="601cb7fd-3ac2-4bc1-b6d5-04c3575fd4c8" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2nnrgIZLm46dl4bDTZm1401oi9g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HOTFIX_customHotfixCommitMessage_text": "Tagging hotfix %name%",
+    "RELEASE_customTagCommitMessage_text": "Tagging version %name%",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/pc/PycharmProjects/AdvancedDataModelGen3/data",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\PycharmProjects\AdvancedDataModelGen3\data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="535a3e40-ef1b-4c6d-816e-a6359307f2cc" name="Changes" comment="" />
+      <created>1729619791365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729619791365</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/interface/sql/query_analyzer.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
